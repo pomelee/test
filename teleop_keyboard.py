@@ -81,7 +81,7 @@ def get_key(settings):
 
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     '''
-    keys = ['a', 'd', 's', 'w', 'x', 's']
+    keys = ['a', 'a', 'a', 'w', 'w', 'w']
     time.sleep(2)
     global keyIdx
     keyIdx = keyIdx + 1
