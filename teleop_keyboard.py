@@ -81,8 +81,8 @@ def get_key(settings):
 
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     '''
-    keys = ['a', 'a', 'a', 'w', 'w', 'w']
-    time.sleep(2)
+    keys = ['a', 'w', 's']
+    time.sleep(5)
     global keyIdx
     keyIdx = keyIdx + 1
     if keyIdx >= len(keys):
@@ -150,7 +150,7 @@ def main():
         print(msg)
         while(1):
             key = get_key(settings)
-
+            print(key)
             if key == 'w' :
                 target_linear_velocity =\
                     check_linear_limit_velocity(target_linear_velocity + LIN_VEL_STEP_SIZE)
