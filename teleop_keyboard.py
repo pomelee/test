@@ -179,7 +179,6 @@ def main():
                 print_vels(target_linear_velocity, target_angular_velocity)
             elif key == 'E' :
                 print('end of program')
-                break;
             else:
                 if (key == '\x03'):
                     break
