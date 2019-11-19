@@ -4,6 +4,7 @@ set -e
 # setup ros2 environment
 source "/opt/ros/dashing/setup.bash"
 
+echo "Install Cartographer dependencies"
 # Install Cartographer dependencies
 sudo apt install -y \
     google-mock \
@@ -17,6 +18,7 @@ sudo apt install -y \
     libpcl-dev \
     python3-sphinx
 
+echo "Install turtlebot3 dependencies"
 # Install Gazebo9
 curl -sSL http://get.gazebosim.org | sh
 sudo apt install -y ros-dashing-gazebo-*
@@ -29,11 +31,10 @@ sudo apt install -y ros-dashing-nav2-bringup
 # Install vcstool
 sudo apt install -y python3-vcstool
 
+echo "Install Turtlebot3"
 # Install turtlebot3
 mkdir -p ~/turtlebot3_ws/src
 cd ~/turtlebot3_ws
 wget https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3/ros2/turtlebot3.repos
 vcs import src < turtlebot3.repos
 colcon build --symlink-install
-
-exec "$@"
