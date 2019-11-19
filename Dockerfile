@@ -11,7 +11,7 @@ RUN git clone https://github.com/pomelee/test.git && \
     ./install.sh
 
 # Merge Test example
-COPY test/src/teleop_keyboard.py /turtlebot3_ws/src/turtlebot3/turtlebot3/turtlebot3_teleop/turtlebot3_teleop/script/
+RUN cp test/src/teleop_keyboard.py ~/turtlebot3_ws/src/turtlebot3/turtlebot3/turtlebot3_teleop/turtlebot3_teleop/script/
 
 # Run Turtlebot3
 CMD ["/bin/bash", "./run.sh"]
