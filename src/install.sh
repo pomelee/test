@@ -16,17 +16,18 @@ sudo apt install -y \
     libcairo2-dev \
     libpcl-dev \
     python3-sphinx
+
 # Install Gazebo9
 curl -sSL http://get.gazebosim.org | sh
-sudo apt install ros-dashing-gazebo-*
+sudo apt install -y ros-dashing-gazebo-*
 # Install Cartographer
-sudo apt install ros-dashing-cartographer
-sudo apt install ros-dashing-cartographer-ros
+sudo apt install -y ros-dashing-cartographer
+sudo apt install -y ros-dashing-cartographer-ros
 # Install Navigation2
-sudo apt install ros-dashing-navigation2
-sudo apt install ros-dashing-nav2-bringup
+sudo apt install -y ros-dashing-navigation2
+sudo apt install -y ros-dashing-nav2-bringup
 # Install vcstool
-sudo apt install python3-vcstool
+sudo apt install -y python3-vcstool
 
 # Install turtlebot3
 mkdir -p ~/turtlebot3_ws/src
