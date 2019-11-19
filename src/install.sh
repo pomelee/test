@@ -26,15 +26,13 @@ echo "================================="
 echo "Install turtlebot3 dependencies"
 # Install Gazebo9
 curl -sSL http://get.gazebosim.org | sh
-sudo apt install -y ros-dashing-gazebo-*
-# Install Cartographer
-sudo apt install -y ros-dashing-cartographer
-sudo apt install -y ros-dashing-cartographer-ros
-# Install Navigation2
-sudo apt install -y ros-dashing-navigation2
-sudo apt install -y ros-dashing-nav2-bringup
-# Install vcstool
-sudo apt install -y python3-vcstool
+sudo apt install -q -y --no-upgrade \
+    ros-dashing-gazebo-* \
+    ros-dashing-cartographer \
+    ros-dashing-cartographer-ros \
+    ros-dashing-navigation2 \
+    ros-dashing-nav2-bringup \
+    python3-vcstool 
 
 echo ""
 echo "================================="
