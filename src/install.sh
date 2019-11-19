@@ -40,8 +40,8 @@ echo ""
 echo "================================="
 echo "Install Turtlebot3"
 # Install turtlebot3
-mkdir -p ~/turtlebot3_ws/src
-cd ~/turtlebot3_ws
+mkdir -p /turtlebot3_ws/src
+cd /turtlebot3_ws
 wget https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3/ros2/turtlebot3.repos
 vcs import src < turtlebot3.repos
 colcon build --symlink-install
