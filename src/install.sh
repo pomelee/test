@@ -8,7 +8,7 @@ echo ""
 echo "================================="
 echo "Install Cartographer dependencies"
 # Install Cartographer dependencies
-sudo apt install -y \
+apt install -y \
     google-mock \
     libceres-dev \
     liblua5.3-dev \
