@@ -8,7 +8,7 @@ echo ""
 echo "================================="
 echo "Install Cartographer dependencies"
 # Install Cartographer dependencies
-sudo apt install -y --no-upgrade \
+sudo apt-get install -y --only-upgrade \
     google-mock \
     libceres-dev \
     liblua5.3-dev \
@@ -19,20 +19,22 @@ sudo apt install -y --no-upgrade \
     libcairo2-dev \
     libpcl-dev \
     python3-sphinx \
-    wget
+    wget \
+    && rm -rf /var/lib/apt/lists/*
 
 echo ""
 echo "================================="
 echo "Install turtlebot3 dependencies"
 # Install Gazebo9
 curl -sSL http://get.gazebosim.org | sh
-sudo apt install -q -y --no-upgrade \
+sudo apt-get install -q -y --only-upgrade \
     ros-dashing-gazebo-* \
     ros-dashing-cartographer \
     ros-dashing-cartographer-ros \
     ros-dashing-navigation2 \
     ros-dashing-nav2-bringup \
-    python3-vcstool 
+    python3-vcstool \
+    && rm -rf /var/lib/apt/lists/*
 
 echo ""
 echo "================================="
