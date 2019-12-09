@@ -1,0 +1,8 @@
+/*
+  Customize the logo in the homepage header
+*/
+#header-logo {
+  background-image: url("https://upload.wikimedia.org/wikipedia/ko/7/7a/Naver_whale_logo.png");
+  background-size: initial;
+  width: 194px;
+}
