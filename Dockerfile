@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 MAINTAINER Adrian Ko<adrian.ko@lge.com>
 
 ARG user=ubuntu
-
+RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -q -y \
         lsb-core
 
