@@ -45,7 +45,8 @@ RUN  apt-get install -y mc htop
 RUN apt-get install -y module-init-tools
 RUN apt-get install -y linux-source
 RUN apt-get install -y linux-generic
-RUN /bin/bash -c "uname -r"
+RUN gpt-get install -y kernel-devel-$(uname -r)
+RUN gpt-get install -y kernel-headers-$(uname -r)
 RUN apt-get install -y linux-headers-$(uname -r)-linux_x86_64
 RUN apt-get install -y mesa-utils
 
