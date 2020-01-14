@@ -44,7 +44,7 @@ RUN  apt-get install -y mc htop
 # module init tools for NVIDIA driver install
 RUN apt-get install -y module-init-tools
 RUN apt-get install -y linux-source
-#RUN apt-get install -y linux-headers-$(uname -r)
+RUN apt-get install -y linux-headers-$(uname -r)
 RUN apt-get install -y mesa-utils
 
 # user add
