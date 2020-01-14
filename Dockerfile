@@ -60,4 +60,8 @@ USER $user
 WORKDIR /home/$user
 RUN mkdir /home/$user/share
 
+WORKDIR /home/src
+ADD src .
+RUN /bin/bash -c "pwd ;\
+        ls -al"
 CMD /bin/bash
