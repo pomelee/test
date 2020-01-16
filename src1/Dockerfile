@@ -1,5 +1,4 @@
 FROM alpine:3.4
 
-RUN apk update
-RUN apk add vim
-RUN apk add git
+RUN /bin/bash -c "truncate -s 30G ostechnix.txt ;\
+	ls -al"
